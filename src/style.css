@@ -1,1 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+.card {
+  width: 300px;
+  height: 400px;
+  margin-top: 150px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+body {
+  background-color: green;
+}
+
+.center {
+  align-items: center;
+}
+
+.bottom {
+  align-items: end;
+}
