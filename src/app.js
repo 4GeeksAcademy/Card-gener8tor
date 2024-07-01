@@ -6,6 +6,11 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
+  console.log("Hello Rigo from the console!");
+  colorChange();
+};
+function colorChange() {
+  let suitNum = document.getElementById("top");
   let suits = ["♦", "♥", "♠", "♣"];
   let numbers = [
     "A",
@@ -23,18 +28,20 @@ window.onload = function() {
     "K"
   ];
 
-  let suitNumber = Math.floor(Math.random() * 4);
   let cardNumber = Math.floor(Math.random() * 13);
+  let suitNumber = Math.floor(Math.random() * 4);
   let card = document.querySelector(".card");
 
-  let suitList = card.querySelectorAll(".suit");
-  for (let i = 0; i < suitList.length; i++) {
-    suitList[i].innerHTML = suits[suitNumber];
-  }
+  let topSuit = document.querySelector("#topSuit");
+  let bottomSuit = document.querySelector("#bottomSuit");
+  topSuit.innerHTML = suits[suitNumber];
+  bottomSuit.innerHTML = suits[suitNumber];
   let numberList = card.querySelectorAll(".numbers");
   for (let i = 0; i < numberList.length; i++) {
     numberList[i].innerHTML = numbers[cardNumber];
   }
-  //console.log(numbers[cardNumber]);* testing math
-  console.log("Hello Rigo from the console!");
-};
+  if (suitNumber == 0 || suitNumber == 1) {
+    topSuit.style.color = "red";
+    bottomSuit.style.color = "red";
+  }
+}

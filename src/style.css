@@ -18,3 +18,12 @@ body {
 .bottom {
   align-items: end;
 }
+
+.h1 {
+  font-size: 70px;
+}
+#bottomSuit {
+  font-size: 70px;
+  justify-content: end;
+  transform: scale(1, -1);
+}
